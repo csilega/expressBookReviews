@@ -119,9 +119,9 @@ function getFromAuthor(author){
     let output = [];
     return new Promise((resolve,reject)=>{
       for (var isbn in books) {
-        let book_ = books[isbn];
-        if (book_.author === author){
-          output.push(book_);
+        let bookNum = books[isbn];
+        if (bookNum.author === author){
+          output.push(bookNum);
         }
       }
       resolve(output);  
@@ -140,9 +140,9 @@ function getFromTitle(title){
     let output = [];
     return new Promise((resolve,reject)=>{
       for (var isbn in books) {
-        let book_ = books[isbn];
-        if (book_.title === title){
-          output.push(book_);
+        let bookNum = books[isbn];
+        if (bookNum.title === title){
+          output.push(bookNum);
         }
       }
       resolve(output);  
